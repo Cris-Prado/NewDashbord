@@ -1,0 +1,14 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "username": "mydashbord_user",
+            "password": "jAQGhUYmAFcldrPCimpDhYB9TQqYy8rO",
+            "database": "mydashbord",
+            "name": "postgresql://mydashbord_user:jAQGhUYmAFcldrPCimpDhYB9TQqYy8rO@dpg-ctk7k452ng1s73bnjtv0-a.oregon-postgres.render.com/mydashbord"
+        }
+    ]
+}

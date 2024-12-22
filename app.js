@@ -52,7 +52,7 @@ app.post('/register', async (req, res) => {
     try {
         const hashedPassword = await bcrypt.hash(password, 10);
 
-        const query = 'INSERT INTO usuarios (username, password) VALUES (?, ?)';
+        const query = 'INSERT INTO mydashbord(username, password) VALUES (?, ?)';
         db.query(query, [username, hashedPassword], (err) => {
             if (err) {
                 if (err.code === 'ER_DUP_ENTRY') {
@@ -76,7 +76,7 @@ app.get('/login', (req, res) => {
 app.post('/login', (req, res) => {
     const { username, password } = req.body;
 
-    const query = 'SELECT * FROM usuarios WHERE username = ?';
+    const query = 'SELECT * FROM mydashbordWHERE username = ?';
     db.query(query, [username], async (err, results) => {
         if (err || results.length === 0) {
             return res.status(401).send('Usuário ou senha incorretos.');
@@ -113,3 +113,5 @@ app.get('/logout', (req, res) => {
 app.listen(PORT, () => {
     console.log(`Servidor rodando na porta ${PORT}`);
 });
+
+
